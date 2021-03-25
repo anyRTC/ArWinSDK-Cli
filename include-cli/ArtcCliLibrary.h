@@ -405,13 +405,13 @@ namespace ArtcCliLibrary
 	private:
 		ar::rtc::IRtcEngine* rtcEngine;
 
-		ArtcCliEventHandler* agoraEventHandler;
-		ArtcCliPacketObserver* agoraPacketObserver;
-		ArtcCliAudioFrameObserver* agoraAudioObserver;
-		ArtcCliVideoFrameObserver* agoraVideoObserver;
-		ArtcCliMetadataObserver* agoraMetadataObserver;
+		ArtcCliEventHandler* artcEventHandler;
+		ArtcCliPacketObserver* artcPacketObserver;
+		ArtcCliAudioFrameObserver* artcAudioObserver;
+		ArtcCliVideoFrameObserver* artcVideoObserver;
+		ArtcCliMetadataObserver* artcMetadataObserver;
 
-		ar::media::IMediaEngine* agoraMediaEngine;
+		ar::media::IMediaEngine* artcMediaEngine;
 
 		List<GCHandle>^ gchs;
 

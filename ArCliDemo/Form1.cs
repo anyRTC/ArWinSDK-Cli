@@ -24,17 +24,12 @@ namespace ArCliDemo
         {
             InitializeComponent();
             log("initialize", artc.initialize(txtVendorkey.Text));
-            //log("initialize rtm", agoraRTM.initialize(txtVendorkey.Text));
             artc.onCameraReady += onCameraReady;
             artc.onJoinChannelSuccess += onJoinChannelSuccess;
             artc.onFirstRemoteVideoDecoded += onFirstRemoteVideoDecoded;
             artc.onFirstLocalVideoFrame += onFirstLocalVideoFrame;
             artc.onCaptureVideoFrame += onCaptureVideoFrame;
             artc.onPreEncodeVideoFrame += onPreEncodeVideoFrame;
-
-            /*AgoraCliRTMChannel channel = agoraRTM.createChannel("1234");
-            channel.onMemberJoined += onMemberJoined;*/
-
         }
 
         bool onPreEncodeVideoFrame(CliVideoFrame frame)
