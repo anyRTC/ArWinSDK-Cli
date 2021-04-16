@@ -71,7 +71,13 @@ namespace ArtcCliLibrary {
 		void dispose();
 	private:
 		void linkCliToRaw();
-		void* regEvent(Object^ obj);
+		//void* regEvent(Object^ obj);
+		template<typename D>
+		inline void* regEvent(D^ d)
+		{
+			gchs->Add(GCHandle::Alloc(d));
+			return (void*)Marshal::GetFunctionPointerForDelegate(d).ToPointer();
+		}
 
 		bool NativeOnInitialize();
 		void NativeOnDispose();

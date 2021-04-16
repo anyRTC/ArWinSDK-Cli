@@ -880,11 +880,13 @@ String^ ArtcCli::getErrorDescription(int code)
 	return gcnew String(rtcEngine->getErrorDescription(code));
 }
 
+#if 0
 void* ArtcCli::regEvent(Object^ obj)
 {
 	gchs->Add(GCHandle::Alloc(obj));
 	return Marshal::GetFunctionPointerForDelegate(obj).ToPointer();
 }
+#endif
 
 void ArtcCli::initializeEventHandler()
 {

@@ -536,6 +536,12 @@ namespace ArtcCliLibrary
 		void initializePacketObserver();
 		void initializeRawFrameObserver();
 		void initializeMetaObserver();
-		void* regEvent(Object^ obj);
+		//void* regEvent(Object^ obj);
+		template<typename D>
+		inline void* regEvent(D^ d)
+		{
+			gchs->Add(GCHandle::Alloc(d));
+			return (void*)Marshal::GetFunctionPointerForDelegate(d).ToPointer();
+		}
 	};
 } // namespace ArtcCliLibrary

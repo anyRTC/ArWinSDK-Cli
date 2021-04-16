@@ -41,11 +41,13 @@ void ArtcCliLibrary::InnerVideoSource::linkCliToRaw()
        
 }
 
+#if 0
 void* ArtcCliLibrary::InnerVideoSource::regEvent(Object^ obj)
 {
     gchs->Add(GCHandle::Alloc(obj));
     return Marshal::GetFunctionPointerForDelegate(obj).ToPointer();
 }
+#endif
 
 bool ArtcCliLibrary::InnerVideoSource::NativeOnInitialize()
 {
