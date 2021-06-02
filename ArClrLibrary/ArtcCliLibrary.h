@@ -47,6 +47,7 @@ namespace ArtcCliLibrary
 		int renewToken(String^ token);
 		int enableWebSdkInteroperability(bool enabled);
 		EnumConnectionStateType getConnectionState();
+		int setParameters(String^ param);
 
 		//频道事件
 		onConnectionStateChanged^ onConnectionStateChanged;

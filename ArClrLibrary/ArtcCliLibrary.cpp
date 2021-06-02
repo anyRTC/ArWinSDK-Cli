@@ -781,6 +781,11 @@ EnumConnectionStateType ArtcCli::getConnectionState()
 	return static_cast<EnumConnectionStateType>(rtcEngine->getConnectionState());
 }
 
+int ArtcCli::setParameters(String^ param)
+{
+	return rtcEngine->setParameters(MarshalString(param).c_str());
+}
+
 int ArtcCli::setDefaultMuteAllRemoteAudioStreams(bool mute)
 {
 	return rtcEngine->setDefaultMuteAllRemoteAudioStreams(mute);

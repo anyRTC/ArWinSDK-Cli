@@ -119,7 +119,7 @@ namespace ArCliDemo
             log("setClientRole", artc.setClientRole(ClientRoleType.CLIENT_ROLE_BROADCASTER));
             log("enableVideo", artc.enableVideo());
             log("setuplocalVideo", artc.setupLocalVideo(localVideo.Handle, (int)EnumRenderModeType.RENDER_MODE_ADAPTIVE, "0"));
-            log("setExternalAudioSink", artc.setExternalAudioSink(true, 44100, 1));
+            //log("setExternalAudioSink", artc.setExternalAudioSink(true, 44100, 1));
             log("startPreview", artc.startPreview());
 
             m_timer = new System.Timers.Timer(10);
