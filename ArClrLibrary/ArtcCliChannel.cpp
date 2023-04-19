@@ -365,7 +365,7 @@ void ArtcCliChannel::NativeOnChannelMediaRelayEvent(IChannel* channel, CHANNEL_M
 			static_cast<EnumChannelMediaRelayEvent>(code));
 }
 
-void ArtcCliChannel::NativeOnRtmpStreamingStateChanged(IChannel* channel, const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR code)
+void ArtcCliChannel::NativeOnRtmpStreamingStateChanged(IChannel* channel, const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR_TYPE code)
 {
 	if (onRtmpStreamingStateChanged)
 		onRtmpStreamingStateChanged(this, gcnew String(url),

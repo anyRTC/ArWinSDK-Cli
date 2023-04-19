@@ -515,7 +515,7 @@ namespace ArtcCliLibrary
 		void NativeOnAudioMixingStateChanged(AUDIO_MIXING_STATE_TYPE state, AUDIO_MIXING_ERROR_TYPE error);
 		void NativeOnRemoteAudioMixingBegin();
 		void NativeOnRemoteAudioMixingEnd();
-		void NativeOnRtmpStreamingStateChanged(const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR error);
+		void NativeOnRtmpStreamingStateChanged(const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR_TYPE error);
 		void NativeOnChannelMediaRelayStateChanged(CHANNEL_MEDIA_RELAY_STATE state, CHANNEL_MEDIA_RELAY_ERROR error);
 		void NativeOnChannelMediaRelayEvent(CHANNEL_MEDIA_RELAY_EVENT event);
 		void NativeOnLastmileProbeResult(const LastmileProbeResult& result);

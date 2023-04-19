@@ -259,9 +259,9 @@ void ArtcCliEventHandler::onLocalAudioStats(const LocalAudioStats& stats)
 	if (onLocalAudioStatsEvent) onLocalAudioStatsEvent(stats);
 }
 
-void ArtcCliEventHandler::onAudioMixingStateChanged(AUDIO_MIXING_STATE_TYPE state, AUDIO_MIXING_ERROR_TYPE error)
+void ArtcCliEventHandler::onAudioMixingStateChanged(AUDIO_MIXING_STATE_TYPE state, AUDIO_MIXING_REASON_TYPE reason)
 {
-	if (onAudioMixingStateChangedEvent) onAudioMixingStateChangedEvent(state, error);
+	if (onAudioMixingStateChangedEvent) onAudioMixingStateChangedEvent(state, reason);
 }
 
 void ArtcCliEventHandler::onRemoteAudioMixingBegin()
@@ -274,7 +274,7 @@ void ArtcCliEventHandler::onRemoteAudioMixingEnd()
 	if (onRemoteAudioMixingEndEvent) onRemoteAudioMixingEndEvent();
 }
 
-void ArtcCliEventHandler::onRtmpStreamingStateChanged(const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR error)
+void ArtcCliEventHandler::onRtmpStreamingStateChanged(const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR_TYPE error)
 {
 	if (onRtmpStreamingStateChangedEvent) onRtmpStreamingStateChangedEvent(url, state, error);
 }

@@ -1281,7 +1281,7 @@ void ArtcCli::NativeOnRemoteAudioMixingEnd()
 		onRemoteAudioMixingEnd();
 }
 
-void ArtcCli::NativeOnRtmpStreamingStateChanged(const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR error)
+void ArtcCli::NativeOnRtmpStreamingStateChanged(const char* url, RTMP_STREAM_PUBLISH_STATE state, RTMP_STREAM_PUBLISH_ERROR_TYPE error)
 {
 	if (onRtmpStreamingStateChanged)
 		onRtmpStreamingStateChanged(gcnew String(url), static_cast<EnumRtmpStreamPublishState>(state), static_cast<EnumRtmpStreamPublishError>(error));
